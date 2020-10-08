@@ -15,7 +15,7 @@
         <h1
           class="mt-6 text-center text-5xl leading-9 font-extrabold text-gray-900"
         >
-          Biodata anda.
+          Isi biodata anda.
         </h1>
       </div>
 
