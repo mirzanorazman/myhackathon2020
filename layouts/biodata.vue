@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="bg-gray-100">
+    <ProgressBar />
     <Nuxt />
   </div>
 </template>
