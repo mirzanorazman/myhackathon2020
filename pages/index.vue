@@ -11,6 +11,11 @@
         >
           Med Form
         </button>
+        <button
+          @click.prevent="$router.push('/ApplicantPages/1-peribadi')"
+        >
+          Applicant Form
+        </button>
       </div>
     </div>
   </div>
