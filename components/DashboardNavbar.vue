@@ -46,7 +46,7 @@
             />
           </nuxt-link>
           <p class="font-bold text-3xl text-indigo-800 pl-2">
-            Portal OKU
+            OKU-R
           </p>
         </div>
 

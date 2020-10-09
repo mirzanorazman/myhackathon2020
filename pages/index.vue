@@ -22,13 +22,13 @@
                 class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
               >
                 <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="#" aria-label="Home">
+                  <nuxt-link to="/" aria-label="Home">
                     <img
                       class="h-8 w-auto sm:h-10"
                       src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
                       alt="Logo"
                     />
-                  </a>
+                  </nuxt-link>
                   <div class="-mr-2 flex items-center md:hidden">
                     <button
                       type="button"

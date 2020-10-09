@@ -40,7 +40,7 @@
         </a>
       </p>
       <a
-        href="https://github.com/mujahidfa/LaborScale"
+        href="https://github.com/mirzanorazman/myhackathon2020"
         target="_blank"
         rel="noopener noreferrer"
       >
