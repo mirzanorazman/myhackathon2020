@@ -177,7 +177,21 @@ export default {
   },
   methods: {
     goToNextPage() {
-      // TODO: Save to Vuex store
+      // Save to Vuex store
+      this.$store.commit("applicant/saveMaklumatPekerjaan", {
+        sektorPekerjaan: this.sektorPekerjaan,
+        statusPekerjaan: this.statusPekerjaan,
+        pekerjaan: this.pekerjaan,
+        namaMajikan: this.namaMajikan,
+        telMajikan: this.telMajikan,
+        streetMajikan: this.streetMajikan,
+        cityMajikan: this.cityMajikan,
+        postcodeMajikan: this.postcodeMajikan,
+        negeriMajikan: this.negeriMajikan,
+        pendapatan: this.pendapatan,
+        pendapatanLain: this.pendapatanLain,
+        sedangCariKerja: this.sedangCariKerja
+      });
 
       this.$router.push("/daftar/biodata/waris");
     }

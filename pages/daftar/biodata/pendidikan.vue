@@ -1,5 +1,4 @@
 <template>
-
   <div
     class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8"
   >
@@ -66,7 +65,12 @@ export default {
   },
   methods: {
     goToNextPage() {
-      // TODO: Save to Vuex store
+      // Save to Vuex store
+      this.$store.commit("applicant/saveMaklumatPendidikan", {
+        tahapPendidikan: this.tahapPendidikan,
+        bidangPengajian: this.bidangPengajian,
+        namaInstitusi: this.namaInstitusi
+      });
 
       this.$router.push("/daftar/biodata/pekerjaan");
     }
