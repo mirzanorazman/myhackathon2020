@@ -240,7 +240,7 @@
       <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://www.cdc.gov/ncbddd/disabilityandhealth/sm/fitness-disabilities-kids_600v2px.jpg"
+          src="https://assets.nst.com.my/images/articles/23okuoku_1495434450.jpg"
           alt=""
         />
       </div>
