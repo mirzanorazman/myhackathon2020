@@ -231,10 +231,10 @@
               </div>
               <div class="mt-3 sm:mt-0 sm:ml-3">
                 <nuxt-link
-                  to="/doctor/login"
+                  to="/log-masuk"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                 >
-                  Doktor
+                  Log Masuk
                 </nuxt-link>
               </div>
             </div>
