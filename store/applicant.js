@@ -30,9 +30,24 @@ export const state = () => ({
   negeriMajikan: "",
   pendapatan: "",
   pendapatanLain: "",
-  sedangCariKerja: ""
+  sedangCariKerja: "",
 
   // waris
+  namaWaris: "",
+  icWaris: "",
+  passportWaris: "",
+  nationalityWaris: "",
+  hubungan: "",
+  jobWaris: "",
+  incomeWaris: "",
+  permanentAddWaris: "",
+  homeNumWaris: "",
+  officeNumWaris: "",
+  mobileNumWaris: "",
+  mailingAddWaris: "",
+  postCodeWaris: "",
+  cityWaris: "",
+  stateWaris: ""
 });
 
 export const mutations = {
@@ -103,5 +118,27 @@ export const mutations = {
     state.pendapatan = pendapatan;
     state.pendapatanLain = pendapatanLain;
     state.sedangCariKerja = sedangCariKerja;
-  }
+  },
+  saveMaklumatWaris(
+    state,
+    { namaWaris, icWaris, passportWaris, nationalityWaris, hubungan, jobWaris, incomeWaris, 
+      permanentAddWaris, homeNumWaris, officeNumWaris, mobileNumWaris, mailingAddWaris, 
+      postCodeWaris, cityWaris, stateWaris  }
+  ) {
+    state.namaWaris = namaWaris;
+    state.icWaris = icWaris;
+    state.passportWaris = passportWaris;
+    state.nationalityWaris = nationalityWaris;
+    state.hubungan = hubungan;
+    state.jobWaris = jobWaris;
+    state.incomeWaris = incomeWaris;
+    state.permanentAddWaris = permanentAddWaris;
+    state.homeNumWaris = homeNumWaris;
+    state.officeNumWaris = officeNumWaris;
+    state.mobileNumWaris = mobileNumWaris;
+    state.mailingAddWaris = mailingAddWaris;
+    state.postCodeWaris = postCodeWaris;
+    state.cityWaris = cityWaris;
+    state.stateWaris = stateWaris;
+  },
 };
