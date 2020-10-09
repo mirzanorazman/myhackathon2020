@@ -1,4 +1,5 @@
 export const state = () => ({
+  // peribadi
   name: "",
   ic: "",
   icTentera: "",
@@ -10,7 +11,28 @@ export const state = () => ({
   street: "",
   city: "",
   postcode: "",
-  negeri: ""
+  negeri: "",
+
+  // pendidikan
+  tahapPendidikan: "",
+  bidangPengajian: "",
+  namaInstitusi: "",
+
+  // pekerjaan
+  sektorPekerjaan: "",
+  statusPekerjaan: "",
+  pekerjaan: "",
+  namaMajikan: "",
+  telMajikan: "",
+  streetMajikan: "",
+  cityMajikan: "",
+  postcodeMajikan: "",
+  negeriMajikan: "",
+  pendapatan: "",
+  pendapatanLain: "",
+  sedangCariKerja: ""
+
+  // waris
 });
 
 export const mutations = {
@@ -43,5 +65,43 @@ export const mutations = {
     state.city = city;
     state.postcode = postcode;
     state.negeri = negeri;
+  },
+  saveMaklumatPendidikan(
+    state,
+    { tahapPendidikan, bidangPengajian, namaInstitusi }
+  ) {
+    state.tahapPendidikan = tahapPendidikan;
+    state.bidangPengajian = bidangPengajian;
+    state.namaInstitusi = namaInstitusi;
+  },
+  saveMaklumatPekerjaan(
+    state,
+    {
+      sektorPekerjaan,
+      statusPekerjaan,
+      pekerjaan,
+      namaMajikan,
+      telMajikan,
+      streetMajikan,
+      cityMajikan,
+      postcodeMajikan,
+      negeriMajikan,
+      pendapatan,
+      pendapatanLain,
+      sedangCariKerja
+    }
+  ) {
+    state.sektorPekerjaan = sektorPekerjaan;
+    state.statusPekerjaan = statusPekerjaan;
+    state.pekerjaan = pekerjaan;
+    state.namaMajikan = namaMajikan;
+    state.telMajikan = telMajikan;
+    state.streetMajikan = streetMajikan;
+    state.cityMajikan = cityMajikan;
+    state.postcodeMajikan = postcodeMajikan;
+    state.negeriMajikan = negeriMajikan;
+    state.pendapatan = pendapatan;
+    state.pendapatanLain = pendapatanLain;
+    state.sedangCariKerja = sedangCariKerja;
   }
 };

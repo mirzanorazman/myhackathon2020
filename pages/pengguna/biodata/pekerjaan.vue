@@ -7,7 +7,7 @@
     </h1>
     <form
       class="flex flex-col space-y-6 w-full max-w-xl mt-4"
-      @submit.prevent="goToNextPage()"
+      @submit.prevent="save()"
     >
       <StyledSelect
         inputId="sektorPekerjaan"
@@ -126,7 +126,7 @@
         class="mt-20 mx-3 shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-3 px-4 rounded"
         type="submit"
       >
-        Seterusnya
+        Simpan
       </button>
     </form>
   </div>
@@ -134,10 +134,10 @@
 
 <script>
 export default {
-  layout: "biodata",
+  layout: "dashboard",
   data() {
     return {
-      sektorPekerjaan: "",
+      sektorPekerjaan: this.$store.state.applicant.sektorPekerjaan,
       sektorPekerjaanOptions: [
         "Kerajaan",
         "Badan berkanun",
@@ -146,7 +146,7 @@ export default {
         "Bekerja sendiri",
         "Tidak Berkenaan"
       ],
-      statusPekerjaan: "",
+      statusPekerjaan: this.$store.state.applicant.statusPekerjaan,
       statusPekerjaanOptions: [
         "Tidak Bekerja",
         "Majikan",
@@ -155,14 +155,14 @@ export default {
         "Bekerja Sendiri",
         "Pesara"
       ],
-      pekerjaan: "",
-      namaMajikan: "",
-      telMajikan: "",
-      streetMajikan: "",
-      cityMajikan: "",
-      postcodeMajikan: "",
-      negeriMajikan: "",
-      pendapatan: "",
+      pekerjaan: this.$store.state.applicant.pekerjaan,
+      namaMajikan: this.$store.state.applicant.namaMajikan,
+      telMajikan: this.$store.state.applicant.telMajikan,
+      streetMajikan: this.$store.state.applicant.streetMajikan,
+      cityMajikan: this.$store.state.applicant.cityMajikan,
+      postcodeMajikan: this.$store.state.applicant.postcodeMajikan,
+      negeriMajikan: this.$store.state.applicant.negeriMajikan,
+      pendapatan: this.$store.state.applicant.pendapatan,
       pendapatanOptions: [
         "Di bawah RM500.00",
         "RM500.00-RM999.00",
@@ -171,12 +171,12 @@ export default {
         "RM3,000.00-RM3,999.00",
         "RM4,000.00 dan ke atas"
       ],
-      pendapatanLain: "",
-      sedangCariKerja: ""
+      pendapatanLain: this.$store.state.applicant.pendapatanLain,
+      sedangCariKerja: this.$store.state.applicant.sedangCariKerja
     };
   },
   methods: {
-    goToNextPage() {
+    save() {
       // Save to Vuex store
       this.$store.commit("applicant/saveMaklumatPekerjaan", {
         sektorPekerjaan: this.sektorPekerjaan,
@@ -192,8 +192,6 @@ export default {
         pendapatanLain: this.pendapatanLain,
         sedangCariKerja: this.sedangCariKerja
       });
-
-      this.$router.push("/daftar/biodata/waris");
     }
   }
 };

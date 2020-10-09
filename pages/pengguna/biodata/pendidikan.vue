@@ -7,7 +7,7 @@
     </h1>
     <form
       class="flex flex-col space-y-6 w-full max-w-xl mt-4"
-      @submit.prevent="goToNextPage()"
+      @submit.prevent="save()"
     >
       <StyledSelect
         inputId="tahapPendidikan"
@@ -35,7 +35,7 @@
         class="mt-20 mx-3 shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-3 px-4 rounded"
         type="submit"
       >
-        Seterusnya
+        Simpan
       </button>
     </form>
   </div>
@@ -43,10 +43,10 @@
 
 <script>
 export default {
-  layout: "biodata",
+  layout: "dashboard",
   data() {
     return {
-      tahapPendidikan: "",
+      tahapPendidikan: this.$store.state.applicant.tahapPendidikan,
       tahapPendidikanOptions: [
         "Tidak bersekolah",
         "Pra-Sekolah",
@@ -59,20 +59,18 @@ export default {
         "Sarjana",
         "Doktor Falsafah"
       ],
-      bidangPengajian: "",
-      namaInstitusi: ""
+      bidangPengajian: this.$store.state.applicant.bidangPengajian,
+      namaInstitusi: this.$store.state.applicant.namaInstitusi
     };
   },
   methods: {
-    goToNextPage() {
+    save() {
       // Save to Vuex store
       this.$store.commit("applicant/saveMaklumatPendidikan", {
         tahapPendidikan: this.tahapPendidikan,
         bidangPengajian: this.bidangPengajian,
         namaInstitusi: this.namaInstitusi
       });
-
-      this.$router.push("/daftar/biodata/pekerjaan");
     }
   }
 };
