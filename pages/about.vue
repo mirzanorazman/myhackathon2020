@@ -262,8 +262,7 @@
                     Khairina Ibrahim
                   </h4>
                   <p class="mt-2 text-base leading-6 text-gray-600">
-                    An aspiring data analyst with a knack for coding and
-                    embroidery. #girlswhocode.
+                    Business analyst with a knack for coding. #girlswhocode
                   </p>
                 </div>
               </div>
