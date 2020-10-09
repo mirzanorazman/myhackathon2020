@@ -16,6 +16,9 @@
           <p class="text-2xl font-semibold text-indigo-700 text-center">
             Sedang diproses
           </p>
+          <p class="font-semibold text-gray-600 text-center">
+            Tarikh pendaftaran: 10 Oktober 2020
+          </p>
         </div>
       </section>
       <section
