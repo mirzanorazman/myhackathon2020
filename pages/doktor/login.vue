@@ -109,7 +109,7 @@
 export default {
   methods: {
     login() {
-      this.$router.push("/doctor");
+      this.$router.push("/doktor");
     }
   }
 };

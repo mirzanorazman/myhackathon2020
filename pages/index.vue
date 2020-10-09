@@ -79,10 +79,10 @@
                   Tentang Kami
                 </nuxt-link>
                 <nuxt-link
-                  to="/doctor/login"
+                  to="/doktor/login"
                   class="font-medium transition duration-150 ease-in-out"
                   :class="
-                    this.$route.path == '/doctor/login'
+                    this.$route.path == '/doktor/login'
                       ? 'text-indigo-600 hover:text-indigo-900'
                       : 'text-gray-500 hover:text-gray-900 '
                   "
