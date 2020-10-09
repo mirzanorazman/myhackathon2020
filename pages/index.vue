@@ -22,13 +22,13 @@
                 class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
               >
                 <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="#" aria-label="Home">
+                  <nuxt-link to="/" aria-label="Home">
                     <img
                       class="h-8 w-auto sm:h-10"
                       src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
                       alt="Logo"
                     />
-                  </a>
+                  </nuxt-link>
                   <div class="-mr-2 flex items-center md:hidden">
                     <button
                       type="button"
@@ -79,10 +79,10 @@
                   Tentang Kami
                 </nuxt-link>
                 <nuxt-link
-                  to="/doctor/login"
+                  to="/doktor/login"
                   class="font-medium transition duration-150 ease-in-out"
                   :class="
-                    this.$route.path == '/doctor/login'
+                    this.$route.path == '/doktor/login'
                       ? 'text-indigo-600 hover:text-indigo-900'
                       : 'text-gray-500 hover:text-gray-900 '
                   "
@@ -240,7 +240,7 @@
       <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://www.cdc.gov/ncbddd/disabilityandhealth/sm/fitness-disabilities-kids_600v2px.jpg"
+          src="https://assets.nst.com.my/images/articles/23okuoku_1495434450.jpg"
           alt=""
         />
       </div>
