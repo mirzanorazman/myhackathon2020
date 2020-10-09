@@ -1,14 +1,5 @@
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: "spa",
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  target: "static",
+  ssr: false,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
