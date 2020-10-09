@@ -40,8 +40,8 @@
       <label class="flex items-center space-x-4">
         <input
           type="radio"
-          id="Wargangera Malaysia"
-          value="Wargangera Malaysia"
+          id="WargangeraMalaysia"
+          value="WargangeraMalaysia"
           v-model="nationalityWaris"
           class="h-3 w-3 border border-gray-400 rounded-full"
         />
@@ -50,8 +50,8 @@
       <label class="flex items-center space-x-4">
         <input
           type="radio"
-          id="Bukan Warganegara"
-          value="Bukan Warganegara"
+          id="BukanWarganegara"
+          value="BukanWarganegara"
           v-model="nationalityWaris"
           class="h-3 w-3 border border-gray-400 rounded-full"
         />
@@ -119,26 +119,26 @@
           placeholder="31 Jalan 3/20"
         />
         <StyledInput
-          inputId="cityWaris"
+          inputId="permCityWaris"
           inputType="text"
-          v-model="cityWaris"
+          v-model="permCityWaris"
           labelText="Bandar"
           placeholder="Bandar Baru Bangi"
         />
         <div class="flex flex-wrap">
           <StyledInput
             class="md:w-1/2"
-            inputId="postcodeWaris"
+            inputId="permPostCodeWaris"
             inputType="text"
-            v-model="postcodeWaris"
+            v-model="permPostCodeWaris"
             labelText="Poskod"
             placeholder="43650"
           />
           <StyledInput
             class="md:w-1/2"
-            inputId="stateWaris"
+            inputId="permStateWaris"
             inputType="text"
-            v-model="stateWaris"
+            v-model="permStateWaris"
             labelText="Negeri"
             placeholder="Selangor"
           />
@@ -152,33 +152,33 @@
       </h2>
       <div class="flex flex-col space-y-3 mb-6">
         <StyledInput
-          inputId="street"
+          inputId="mailingAddWaris"
           inputType="text"
-          v-model="street"
+          v-model="mailingAddWaris"
           labelText="Nama Jalan"
           placeholder="31 Jalan 3/20"
         />
         <StyledInput
-          inputId="city"
+          inputId="mailingCityWaris"
           inputType="text"
-          v-model="city"
+          v-model="mailingCityWaris"
           labelText="Bandar"
           placeholder="Bandar Baru Bangi"
         />
         <div class="flex flex-wrap">
           <StyledInput
             class="md:w-1/2"
-            inputId="postcode"
+            inputId="mailingPostCodeWaris"
             inputType="text"
-            v-model="postcode"
+            v-model="mailingPostCodeWaris"
             labelText="Poskod"
             placeholder="43650"
           />
           <StyledInput
             class="md:w-1/2"
-            inputId="state"
+            inputId="mailingStateWaris"
             inputType="text"
-            v-model="negeri"
+            v-model="mailingStateWaris"
             labelText="Negeri"
             placeholder="Selangor"
           />
@@ -198,11 +198,15 @@
 export default {
   layout: "dashboard",
   data() {
-    return {
+        return {
       namaWaris: this.$store.state.applicant.namaWaris,
       icWaris: this.$store.state.applicant.icWaris,
       passportWaris: this.$store.state.applicant.passportWaris,
       nationalityWaris: this.$store.state.applicant.nationalityWaris,
+      // nationalityOptions: [
+      //   "Warganegara",
+      //   "Bukan warganegara"
+      // ],
       hubungan: this.$store.state.applicant.hubungan,
       hubunganWarisOptions: [
         "Ibu",
@@ -222,14 +226,17 @@ export default {
         "RM3,000.00-RM3,999.00",
         "RM4,000.00 dan ke atas"
       ],
-      permanentAddWaris: this.$store.state.applicant.permanentAddWaris,
+      permanentAddWaris: this.$store.state.applicant.permanentAddWaris,      
+      permPostCodeWaris: this.$store.state.applicant.permPostCodeWaris,
+      permCityWaris: this.$store.state.applicant.permCityWaris,
+      permStateWaris: this.$store.state.applicant.permStateWaris,
       homeNumWaris: this.$store.state.applicant.homeNumWaris,
       officeNumWaris: this.$store.state.applicant.officeNumWaris,
       mobileNumWaris: this.$store.state.applicant.mobileNumWaris,
       mailingAddWaris: this.$store.state.applicant.mailingAddWaris,
-      postCodeWaris: this.$store.state.applicant.postCodeWaris,
-      cityWaris: this.$store.state.applicant.cityWaris,
-      stateWaris: this.$store.state.applicant.stateWaris,
+      mailingPostCodeWaris: this.$store.state.applicant.mailingPostCodeWaris,
+      mailingCityWaris: this.$store.state.applicant.mailingCityWaris,
+      mailingStateWaris: this.$store.state.applicant.mailingStateWaris
     };
   },
   methods: {
@@ -244,13 +251,16 @@ export default {
         jobWaris: this.jobWaris,
         incomeWaris: this.incomeWaris,
         permanentAddWaris: this.permanentAddWaris,
+        permPostCodeWaris: this.permPostCodeWaris,
+        permCityWaris: this.permCityWaris,
+        permStateWaris: this.permStateWaris,
         homeNumWaris: this.homeNumWaris,
         officeNumWaris: this.officeNumWaris,
         mobileNumWaris: this.mobileNumWaris,
         mailingAddWaris: this.mailingAddWaris,
-        postCodeWaris: this.postCodeWaris,
-        cityWaris: this.cityWaris,
-        stateWaris: this.stateWaris,
+        mailingPostCodeWaris: this.mailingPostCodeWaris,
+        mailingCityWaris: this.mailingCityWaris,
+        mailingStateWaris: this.mailingStateWaris
       });
     }
   }

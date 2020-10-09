@@ -41,13 +41,16 @@ export const state = () => ({
   jobWaris: "",
   incomeWaris: "",
   permanentAddWaris: "",
+  permPostCodeWaris: "",
+  permCityWaris: "",
+  permStateWaris: "",
   homeNumWaris: "",
   officeNumWaris: "",
   mobileNumWaris: "",
   mailingAddWaris: "",
-  postCodeWaris: "",
-  cityWaris: "",
-  stateWaris: ""
+  mailingpostCodeWaris: "",
+  mailingcityWaris: "",
+  mailingstateWaris: ""
 });
 
 export const mutations = {
@@ -122,8 +125,8 @@ export const mutations = {
   saveMaklumatWaris(
     state,
     { namaWaris, icWaris, passportWaris, nationalityWaris, hubungan, jobWaris, incomeWaris, 
-      permanentAddWaris, homeNumWaris, officeNumWaris, mobileNumWaris, mailingAddWaris, 
-      postCodeWaris, cityWaris, stateWaris  }
+      permanentAddWaris, permPostCodeWaris, permCityWaris, permStateWaris, homeNumWaris, officeNumWaris, 
+      mobileNumWaris, mailingAddWaris, mailingPostCodeWaris, mailingCityWaris, mailingStateWaris  }
   ) {
     state.namaWaris = namaWaris;
     state.icWaris = icWaris;
@@ -133,12 +136,15 @@ export const mutations = {
     state.jobWaris = jobWaris;
     state.incomeWaris = incomeWaris;
     state.permanentAddWaris = permanentAddWaris;
+    state.permPostCodeWaris = permPostCodeWaris;
+    state.permCityWaris = permCityWaris;
+    state.permStateWaris = permStateWaris;
     state.homeNumWaris = homeNumWaris;
     state.officeNumWaris = officeNumWaris;
     state.mobileNumWaris = mobileNumWaris;
     state.mailingAddWaris = mailingAddWaris;
-    state.postCodeWaris = postCodeWaris;
-    state.cityWaris = cityWaris;
-    state.stateWaris = stateWaris;
+    state.mailingPostCodeWaris = mailingPostCodeWaris;
+    state.mailingCityWaris = mailingCityWaris;
+    state.mailingStateWaris = mailingStateWaris;
   },
 };
