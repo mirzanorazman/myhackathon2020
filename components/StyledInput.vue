@@ -11,6 +11,7 @@
       :id="inputId"
       :type="inputType"
       @input="$emit('input', $event.target.value)"
+      :value="value"
       :placeholder="placeholder"
     />
   </div>
